@@ -26,7 +26,7 @@ interface QuestionRes {
 type ActionResponse<T = null> = {
   success: boolean;
   data?: T;
-  errors?: {
+  error?: {
     message: string;
     details?: Record<string, string[]>;
   };
