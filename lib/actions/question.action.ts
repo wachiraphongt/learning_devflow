@@ -2,7 +2,7 @@
 
 import mongoose, { FilterQuery } from "mongoose";
 
-import Question from "@/database/question.model";
+import Question, { IQuestionDoc } from "@/database/question.model";
 import TagQuestion from "@/database/tag-question.model";
 import Tag, { ITagDoc } from "@/database/tag.model";
 import {
@@ -201,7 +201,7 @@ export async function editQuestion(
 
 export async function getQuestion(
   params: GetQuestionParams
-): Promise<ActionResponse<QuestionRes>> {
+): Promise<ActionResponse<IQuestionDoc>> {
   const validationResult = await action({
     params,
     schema: GetQuestionSchema,

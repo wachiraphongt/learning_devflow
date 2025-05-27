@@ -24,6 +24,9 @@ const Home = async ({ searchParams }: SearchParams) => {
 
   const { questions } = data || {};
 
+  console.log("Questions data:", JSON.stringify(questions, null, 2));
+  console.log("IQuestionDoc");
+
   // const filteredQuestions = questions.filter((question) => {
   //   const matchesQuery = question.title
   //     .toLowerCase()
